@@ -1,0 +1,15 @@
+[Unit]
+Description=Logstash Kafka Service
+After=network.target
+
+[Service]
+User=farooq
+WorkingDirectory=/home/farooq
+ExecStart=/usr/bin/python3 /home/farooq/logstash-kafka.py >> /home/farooq/logstash-kafka_output.log >> /home/farooq/logstash-kafka_error.log
+
+
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
