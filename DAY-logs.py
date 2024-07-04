@@ -1,6 +1,8 @@
 import gzip
 import shutil
 import os
+############# NEED TO CHANGE THE  if " Authen " in line, BASED ON YOUR KEY WORD  #################
+
 
 def decompress_and_filter(input_gz_path, log_file_path):
     try:
